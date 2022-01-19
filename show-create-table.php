@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <php require_once("../1.assets/css/include-all.php") > -->
     <title>Data base functions</title>
-    <?= get_dir_files("./1.assets/css/","css") ?>
+    <?= get_dir_files("./1.assets/css/", "css") ?>
 </head>
 
 <body>
@@ -23,7 +23,9 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <span class="label">DB Name:</span>
-                                <input type="text" class="form-control" name="db_name" required data-length='[0-50]'>
+                                <select name="db_name" class="form-control">
+                                    
+                                <select>
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -36,7 +38,7 @@
                             <input type="hidden" name="insertNew" value="true">
                             <button type="submit" class="submit-btn">
                                 <i class="fas fa-save"></i> Fetch
-                            </button> 
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -45,9 +47,8 @@
     </div>
 
 
-   <script src="./1.assets/js/jquery.min.js"></script>
-   <script src="./1.assets/js/Table-create.js"></script>
-
+    <script src="./1.assets/js/jquery.min.js"></script>
+    <script src="./1.assets/js/Table-create.js"></script>
 </body>
 
 </html>
