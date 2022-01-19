@@ -1,0 +1,334 @@
+body.resizing{
+    cursor: e-resize !important;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+/*-----------------------------
+        Top Bar Start
+----------------------------- */
+.head{
+    background: #2C324E;
+}
+.head .editorOptions .option{
+    margin: 0 10px;
+}
+/*-----------------------------
+        Top Bar End
+----------------------------- */
+.file-manager .head{
+    height: 50px;
+}
+.file-manager .sidebar{
+	background: #212432;
+    color: #fff;
+    overflow: auto;
+    height: calc(100vh - 50px);
+    width: 250px;
+    position: fixed;
+    top: 50px;
+    left: 0;
+}
+.file-manager .sidebar .resizer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    cursor: e-resize;
+    
+}
+.files-list{
+	list-style: none;
+	padding: 20px 0;
+}
+.folders .folder i{
+	margin-right: 5px;
+}
+.file-manager .sidebar .files {
+    padding-left: 20px;
+    position: relative;
+}
+.file-manager .sidebar .files::after,
+.file-manager .sidebar li.folder::after
+ {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff2;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.file-manager .sidebar .files .dragover::after,
+.file-manager .sidebar li.dragover::after{
+    opacity: 1;
+} 
+
+.file-manager .sidebar .files .project-folder > .files {
+    display: block;
+}
+.file-manager .sidebar .files .file .meta-data .loader {
+    border-color: #fff #fff #fff transparent;
+    width: 16px;
+    height: 16px;
+    border-width: 1px;
+    margin-right: 14px;
+}
+
+.file-manager .sidebar .files .file .meta-data .loader ~ .file-icon,
+.file-manager .sidebar .files .file .meta-data .loader ~ i,
+.file-manager .sidebar .files .file .meta-data .loader ~ img
+{
+    display: none;
+}
+.file-manager .sidebar .files .file .meta-data {
+    display: flex;
+    white-space: nowrap;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.file-manager .sidebar .files .file {
+    padding: 0;
+    list-style: none;
+    cursor: default;
+    font-size: 13px;
+    position: relative;
+}
+.file-manager .sidebar .files .file .meta-data{
+    padding: 5px 0;
+}
+.file-manager .sidebar .files .file .name{
+    color: #aaa;
+}
+.file-manager .sidebar .files .file .meta-data:hover .name{
+    color: #fff;
+}
+.file-manager .sidebar .files .file.active > .meta-data .name,
+.file-manager .sidebar .files .file .meta-data.active .name,
+.file-manager .sidebar .files .file .meta-data.selected .name
+{
+    color: #FFF;
+}
+
+.file-manager .sidebar .files .file .meta-data{
+    position: relative;
+}
+.file-manager .sidebar .files .file .meta-data.selected::after,
+.file-manager .sidebar .files .file.active > .meta-data::after {
+    content: "";
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background: #FFF;
+    left: -15px;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+}
+.file-manager .sidebar .files .file{
+    list-style: none;
+}
+
+.sidebar .files .data-icon{
+	margin-right: 10px;
+}
+.sidebar .files .data-icon.data-img{
+	width: 20px;
+}
+.file-manager .sidebar .files .files{
+    display: none;
+}
+select.form-control:hover{
+    background: transparent;
+    padding: .375rem .75rem;
+}
+.file-manager .sidebar .files .file .file-icon {
+    font-size: 12px;
+    margin-right: 10px;
+    width: 20px;
+    margin-left: 5px;
+}
+
+.nc-context-menu ul li {
+    font-size: 13px;
+    padding: 4px 10px 4px 20px;
+}
+/* ---------------------------
+       Start Code Editor
+-----------------------------*/
+
+.code-editor{
+    background: #292D3E;
+    margin-left: 250px;
+    padding: 0px;
+    height: calc(100vh - 50px);
+    position: relative;
+}
+.code-editor .CodeMirror-sdfd{
+    width: 100%;
+    height: 300px
+}
+.tabs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    padding: 0;
+    z-index: 9;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    background-color: #292d3e;
+}
+
+.tabs .tab {
+    padding: 10px 20px;
+    font-size: 12px;
+    border-right: 1px solid #0005;
+    color: #AAA;
+    font-weight: bold;
+    cursor: default;
+    border-bottom: 2px solid transparent;
+    transform-origin: left;
+    animation: openUp 0.1s linear forwards;
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #292d3e;
+}
+.tabs .tab .icons{
+    margin-left: 50px;
+}
+.tabs .tab i {
+    display: inline-block;
+}
+.tabs .tab.unsaved .edit-btn {
+    display: inline-block;
+}
+.tabs .tab.unsaved .close-file-btn {
+    display: none;
+}
+.tabs .tab:hover{
+    border-bottom-color: #8adbfc;
+}
+.tabs .tab.active{
+    color: #FFF;
+    border-bottom-color: #8adbfc;
+}
+
+@keyframes openUp{
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+}
+
+.CodeMirror {
+    padding-top: 42px;
+    font-size: 16px !important;
+    height: 100%;
+}
+input:focus{
+    outline: none;
+}
+.new-file-form{
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+}
+.file-name-input{
+    background: #2D324A;
+    border: 1px solid #0005;
+    color: #FFF;
+    width: 100%;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+.new-file-form i{
+    padding: 0 5px;
+}
+.file-manager .sidebar .files .file .name[contenteditable="true"] {
+    background-color: #2d324a;
+    cursor: text;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+
+.file-manager .sidebar .files .file .name:focus {
+    outline: none;
+}
+/* ---------------------------
+       End Code Editor
+-----------------------------*/
+/* ---------------------------
+       Default Theme Start
+-----------------------------*/
+.CodeMirror-matchingtag{
+    background: #FFF1;
+}
+span.cm-meta {
+    color: #89dde9;
+}
+
+.cm-s-ayu-dark span.cm-variable-2 {
+    color: #959dcb;
+}
+
+.cm-s-ayu-dark span.cm-string {
+    color: #c3e879;
+}
+
+.cm-s-ayu-dark span.cm-keyword {
+    color: #c792ea;
+    font-style: italic;
+}
+
+.cm-s-ayu-dark span.cm-def {
+    color: #82aae9;
+}
+
+.cm-s-ayu-dark.CodeMirror {
+    background-color: #292d3e;
+}
+
+.cm-s-ayu-dark .CodeMirror-activeline-background {
+    background-color: #383c4e;
+}
+
+.cm-s-ayu-dark .CodeMirror-gutters {
+    background-color: #292d3e;
+}
+
+.cm-s-ayu-dark .CodeMirror-linenumber {
+    color: #fff2;
+}
+
+span.cm-variable.cm-overlay {
+    color: #82aae9;
+}
+
+span.cm-variable {
+}
+
+.cm-s-ayu-dark span.cm-variable {
+    color: #82aae9;
+}
+
+pre.CodeMirror-line {
+    color: #82aae9;
+}
+
+.cm-s-ayu-dark span.cm-number {
+    color: #f78159;
+}
+
+.cm-s-ayu-dark span.cm-builtin {
+    color: #82aae9;
+}
+/* ---------------------------
+       Default Theme End
+-----------------------------*/

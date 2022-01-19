@@ -1,0 +1,57 @@
+.tc-nav .tc-nav-items{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+.tc-nav .tc-nav-items .tc-nav-items-group{
+    display: flex;
+}
+.tc-nav .tc-nav-item,
+.tc-nav .tc-nav-btn
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-family: var(--fontFamily);
+    padding: 7px 20px;
+    background-color: transparent;
+    border-right: 1px solid #fff2;
+}
+.tc-nav .tc-nav-item.active,
+.tc-nav .tc-nav-item:hover
+{
+    background-color: var(--bg-color-light);
+}
+.tc-nav-panel{
+    display: none;
+}
+.tc-nav-panel.active{
+    display: block;
+}
+/* ------------ TC Input Group Start -------------- */
+.tc-input-group {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.tc-input-group .form-control:not(.tc-file-input){
+    width: auto;
+    flex: 1;
+    border-right: none;
+    max-width: calc(100% - 38px);
+}
+.tc-input-group .tc-input-group-txt {
+    background-color: var(--bg-color);
+    width: 38px !important;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    color: var(--text-color);
+}
+.tc-input-group .tc-file-input{
+    display: none;
+}
+/* ------------ TC Input Group End -------------- */

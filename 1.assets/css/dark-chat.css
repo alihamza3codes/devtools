@@ -1,0 +1,139 @@
+:root{
+    --nc-chat-color: #192229;
+    --nc-chat-color: linear-gradient(#0005, #0005), url(../../images/background.jpg) no-repeat bottom fixed;
+    --nc-chat-color-1: #1f2831;
+    --nc-chat-color-2: #1F2831;
+    --nc-chat-color-2: transparent;
+}
+.tc-chat{
+    background-size: cover;
+}
+.nc-navbar{
+    background: var(--nc-chat-color-2);
+}
+.nc-navbar .quick-links{
+    background: #102e3c;
+    -webkit-box-shadow: 0 10px 30px #1F283122;
+            box-shadow: 0 10px 30px #1F283122;
+}
+.tc-chat .tc-single-msg-box{
+    padding: 0;
+}
+.tc-chat {
+    padding: 0;
+}
+
+.tc-chat .tc-users {
+    padding-right: 0;
+    border-radius: 0;
+    border-right: 1px solid #fff2;
+    overflow: hidden;
+}
+.tc-chat .tc-users .tc-all-users{
+    overflow: auto;
+}
+
+.tc-chat .tc-users .tc-head {
+    border-radius: 0;
+    background: var(--nc-chat-color-2);
+}
+
+.tc-chat .tc-users .tc-head.prev-user-label {
+    border-radius: 0 !important;
+}
+
+.tc-user.tc-open-chat.prev-user.tc-user-prev {
+    border-radius: 0;
+}
+
+.tc-user.tc-open-chat.current + .tc-user {
+    border-radius: 0;
+}
+.tc-chat .tc-users .tc-user::before,
+.tc-chat .tc-users .tc-user::after
+{
+    content: none;
+}
+
+.tc-chat .tc-users .tc-user {
+    background: var(--nc-chat-color-2);
+    border-bottom: 1px solid #fff1;
+}
+
+.tc-chat .tc-users .tc-user .tc-user-name {
+    color: #fff;
+}
+
+.tc-user.tc-open-chat.current {
+    border-left-color: transparent;
+}
+
+.tc-chat .tc-users .tc-user.tc-open-chat.current {
+    background: #fff1;
+}
+.tc-users .tc-user .tc-user-time{
+    color: #aaa;
+}
+
+
+
+.tc-chat .tc-single-msg-box .tc-msg-box-head{
+    border-bottom: 1px solid #fff2;
+    z-index: 99;
+    padding: 15px 25px;
+    background: #fff2;
+}
+.tc-chat .tc-single-msg-box .tc-msg-box-head .tc-user-name{
+    color: #FFF;
+}
+
+.tc-chat .tc-single-msg-box .tc-msg-box-body .tc-msg-body.tc-left-msg .tc-msg-txt {
+    background: var(--grey_color);
+    color: #FFF;
+}
+.tc-chat .tc-single-msg-box .tc-msg-box-body .tc-msg-body.tc-right-msg .tc-msg-txt{
+    background: #224252;
+}
+.tc-chat .tc-single-msg-box .tc-msg-box-footer{
+    background: transparent;
+}
+.tc-chat .tc-single-msg-box .tc-msg-box-footer .tc-msg-text,
+.tc-chat .tc-single-msg-box .tc-msg-box-footer .tc-msg-form
+{
+    background: var(--nc-chat-color-2);
+}
+
+.tc-chat .tc-single-msg-box .tc-msg-box-footer label.tc-attach-file,
+.tc-chat .tc-single-msg-box .tc-msg-box-footer .tc-send-btn, .tc-chat .tc-single-msg-box .tc-msg-box-footer .tc-footer-icon{
+    color: #999;
+}
+.tc-chat .tc-single-msg-box .tc-msg-layout-line{
+    pointer-events: all;
+    background: #fff2 !important;
+}
+.tc-reply-msg-con .tc-reply-msg{
+    background: #303b46;
+    color: #FFF;
+}
+.tc-chat .tc-single-msg-box .tc-msg-box-footer .tc-msg-form,
+.tc-highlighted,
+.tc-attachments, .tc-reply-form,
+.tc-attachments .tc-single-file{
+    background: #fff1;
+}
+.tc-chat .tc-single-msg-box .tc-msg-box-footer .tc-msg-text::placeholder{
+    color: #ccc;
+}
+.tc-chat .tc-single-msg-box .tc-msg-box-footer .tc-msg-text{
+    color: #FFF;
+}
+.tc-msg-options .dropdown-menu, .tc-box{
+    background: #fff1;
+    color: #FFF;
+}
+.tc-msg-options .dropdown-menu .dropdown-item{
+    color: #FFF;
+}
+.tc-msg-options .dropdown-menu .dropdown-item:hover{
+    background: #fff2;
+}
