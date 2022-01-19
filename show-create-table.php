@@ -13,32 +13,15 @@
 
 <body>
 
-
     <div class="container">
         <div class="card">
             <div class="card-body">
                 <!-- show-create form for -->
-                <form class="show-create-form">
+                <form>
                     <div class="row">
                         <div class="col-md-6">
-                            <div class="form-group">
-                                <span class="label">DB Name:</span>
-                                <select name="db_name" class="form-control">
-                                    
-                                <select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <span class="label">Table Name:</span>
-                                <input type="text" class="form-control" style="color: black;" name="table_name_col" required data-length='[0-100]'>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <input type="hidden" name="insertNew" value="true">
-                            <button type="submit" class="submit-btn">
-                                <i class="fas fa-save"></i> Fetch
-                            </button>
+                            <label for="">Your DB Name:</label>
+                            <select name="show_db_name" class="form-control"></select>
                         </div>
                     </div>
                 </form>
